@@ -21,6 +21,8 @@ public class PaymentDef {
     public void customerNumberIs(int customerNumber) {
         findPayment = new PaymentMakeRequest();
         findPayment.findPaymentByCustomerNumber(customerNumber);
+
+
     }
 
     @Then("payment return with check number is {int} with the nearest purchase.")

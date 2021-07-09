@@ -1,9 +1,5 @@
 package CucumberTesting.Payment;
 
-import com.devops.demo_devops.Tables.Payments;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;

@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "src/test/java/CucumberTesting/Payment"
+        glue = "com.devops.demo_devops"
 )
 public class PaymentRunner {
 }
