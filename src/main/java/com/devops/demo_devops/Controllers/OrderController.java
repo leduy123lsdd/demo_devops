@@ -3,15 +3,12 @@ package com.devops.demo_devops.Controllers;
 import com.devops.demo_devops.Reposotories.OrderRepository;
 import com.devops.demo_devops.Tables.Orders;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
 
 @RestController
-//@EnableAsync
 public class OrderController {
 
     @Autowired
@@ -43,7 +40,6 @@ public class OrderController {
     }
 
     //TODO: Update status
-//    @Async
     @PostMapping("/order/updateStatus")
     List<Orders> updateStatus(@RequestBody Map<String, String> body) throws InterruptedException {
         int orderNumber = Integer.parseInt(body.get("orderNumber"));
@@ -56,6 +52,8 @@ public class OrderController {
 
         return orderRepository.findByCustomerNumber(customerNumber);
     }
+
+
 
 }
 

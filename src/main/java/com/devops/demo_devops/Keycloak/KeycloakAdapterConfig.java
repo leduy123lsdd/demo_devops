@@ -60,8 +60,8 @@ public class KeycloakAdapterConfig extends KeycloakWebSecurityConfigurerAdapter 
 
         http
                 .authorizeRequests()
-                .antMatchers("/product*").hasRole("user")
-                .antMatchers("/payment*").hasRole("admin")
+//                .antMatchers("/product").hasRole("user")
+//                .antMatchers("/payment*").hasRole("admin")
                 .anyRequest()
                 .authenticated();
     }

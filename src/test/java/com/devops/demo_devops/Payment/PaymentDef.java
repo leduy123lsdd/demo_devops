@@ -1,4 +1,4 @@
-package CucumberTesting.Payment;
+package com.devops.demo_devops.Payment;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;

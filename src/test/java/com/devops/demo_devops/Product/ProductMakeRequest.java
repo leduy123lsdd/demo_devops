@@ -1,4 +1,4 @@
-package CucumberTesting.Product;
+package com.devops.demo_devops.Product;
 
 import org.json.JSONArray;
 import org.json.JSONException;

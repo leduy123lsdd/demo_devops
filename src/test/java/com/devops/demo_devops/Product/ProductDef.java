@@ -1,4 +1,4 @@
-package CucumberTesting.Product;
+package com.devops.demo_devops.Product;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
