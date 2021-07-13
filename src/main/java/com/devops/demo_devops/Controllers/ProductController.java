@@ -28,8 +28,9 @@ public class ProductController {
     }
 
     // Add new product.
-    @PostMapping("/product")
+    @PostMapping("/product/create")
     public String create(@RequestBody Map<String, String> body) {
+
         int productCode = Integer.parseInt(body.get("productCode"));
         String productName = body.get("productName");
         String productDescription = body.get("productDescription");
@@ -37,9 +38,12 @@ public class ProductController {
 
         Optional<Products> searchForProductId = productsRepository.findById(productCode);
 
+        Thread.sleep(2000);
+
         if (searchForProductId.isPresent()) {
 
             return "ProductCode already existed";
+
         } else {
             productsRepository.save(new Products(productCode, productName, productDescription, buyPrice));
 
@@ -49,8 +53,9 @@ public class ProductController {
 
     // Delete product by productCode
     @DeleteMapping("/product/delete/{productCode}")
-    public List<Products> deleteProduct(@PathVariable int productCode) {
+    public List<Products> deleteProduct(@PathVariable int productCode) throws InterruptedException {
         productsRepository.deleteById(productCode);
+        Thread.sleep(1000);
         return productsRepository.findAll();
     }
 }
